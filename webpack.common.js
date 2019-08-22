@@ -19,6 +19,13 @@ module.exports = {
                     }
                 }
             }
+            {
+                test: /\.svelte/,
+                use: {
+                    loader: 'svelte-loader',
+                    exclude: '/node_modules/',
+                }
+            }
         ]
     },
 }
