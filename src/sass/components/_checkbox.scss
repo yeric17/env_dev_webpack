@@ -1,0 +1,52 @@
+ip-checkbox{
+    --checkbox-fill-color: #009D9C;
+    --checkbox-border-color: #009D9C;
+    display: flex;
+    width: 300px;
+    padding-bottom: .5em;
+    label{
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+    }
+    input{
+        display: none;
+    }
+    input:checked + label .checkbox::after{
+        border-color: white;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+    input:checked + label .checkbox {
+        background-color: var(--checkbox-fill-color);
+    }
+    
+    .checkbox{
+        box-sizing: border-box;
+        position: relative;
+        align-self: flex-start;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        width: 1em;
+        height: 1em;
+        border: .15em solid var(--checkbox-fill-color);
+        margin-right: .4em;
+    }
+    .checkbox::after {
+        content: "";
+        transition: all .3s;
+        position: absolute;
+        display: inline-flex;
+        box-sizing: border-box;
+        width: .4em;
+        height: .7em;
+        border-right: .15em solid transparent;
+        border-bottom: .15em solid transparent;
+        left: 50%;
+        top: 35%;
+        transition-timing-function: ease-in;
+        transform: translate(-50%, -50%) scale(.1);
+        
+    }
+}

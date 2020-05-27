@@ -1,4 +1,3 @@
 import './sass/main.scss';
-import {printAlert} from './js/alert';
-
-printAlert();
+import radio from './js/components/radio';
+import checkbox from './js/components/checkbox';

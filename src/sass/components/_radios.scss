@@ -1,0 +1,49 @@
+ip-radio{
+    --radio-fill-color: #009D9C;
+    --radio-border-color: #009D9C;
+    --radio-fill-size: .56em;
+    label{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        user-select: none;
+        cursor: pointer;
+    }
+    input{
+        display: none;
+    }
+    input:checked + label .radio::after{
+        background-color: var(--radio-fill-color);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .radio{
+        box-sizing: border-box;
+        position: relative;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        width: 1em;
+        height: 1em;
+        border: .15em solid var(--radio-fill-color);;
+        border-radius: 100%;
+        margin-right: .4em;
+        align-self: flex-start;
+    }
+    .radio::after {
+        content: "";
+        transition: all .3s;
+        position: absolute;
+        display: inline-flex;
+        box-sizing: border-box;
+        width: var(--radio-fill-size);
+        height: var(--radio-fill-size);
+        left: 50%;
+        top: 50%;
+        transition-timing-function: ease-in;
+        transform: translate(-50%, -50%) scale(3);
+        border-radius: 100%;
+        background-color: transparent;
+    }
+
+}
